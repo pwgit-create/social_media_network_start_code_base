@@ -1,0 +1,83 @@
+App Documentation
+
+------------------
+Class name: User
+Public Methods: public boolean User.equals(java.lang.Object)
+public int User.hashCode()
+public java.lang.String User.getUsername()
+public java.lang.String User.getPassword()
+public java.lang.String User.getEmail()
+public void User.setUsername(java.lang.String)
+public void User.setEmail(java.lang.String)
+public void User.setPassword(java.lang.String)
+Public Constructors: public User(java.lang.String,java.lang.String,java.lang.String)
+------------------
+Class name: Post
+Public Methods: public boolean Post.equals(java.lang.Object)
+public int Post.hashCode()
+public java.lang.String Post.getContent()
+public User Post.getUser()
+public void Post.setUser(User)
+public void Post.setContent(java.lang.String)
+Public Constructors: public Post(User,java.lang.String)
+------------------
+Class name: Comment
+Public Methods: public boolean Comment.equals(java.lang.Object)
+public int Comment.hashCode()
+public java.lang.String Comment.getContent()
+public Post Comment.getPost()
+public void Comment.setPost(Post)
+public User Comment.getUser()
+public void Comment.setUser(User)
+public void Comment.setContent(java.lang.String)
+Public Constructors: public Comment(User,Post,java.lang.String)
+------------------
+Class name: Message
+Public Methods: public boolean Message.equals(java.lang.Object)
+public int Message.hashCode()
+public java.lang.String Message.getContent()
+public User Message.getSender()
+public void Message.setSender(User)
+public User Message.getReceiver()
+public void Message.setReceiver(User)
+public void Message.setContent(java.lang.String)
+Public Constructors: public Message(User,User,java.lang.String)
+------------------
+Class name: Friendship
+Public Methods: public java.util.List Friendship.getMessages()
+public User Friendship.getUser1()
+public User Friendship.getUser2()
+public void Friendship.setAccepted(boolean)
+public void Friendship.addMessage(Message)
+public boolean Friendship.isAccepted()
+Public Constructors: public Friendship(User,User)
+------------------
+Class name: Notification
+No public methods
+Public Constructors: public Notification(User,Post,java.lang.String)
+public Notification(User,Comment,java.lang.String)
+public Notification(User,Message,java.lang.String)
+------------------
+Class name: Feed
+Public Methods: public void Feed.addPost(Post)
+public void Feed.removePost(Post)
+public java.util.List Feed.getPosts()
+Public Constructors: public Feed(User)
+------------------
+Class name: Profile
+Public Methods: public User Profile.getUser()
+public void Profile.setUser(User)
+public void Profile.addPost(Post)
+public void Profile.removePost(Post)
+Public Constructors: public Profile(User)
+------------------
+Class name: Search
+Public Methods: public java.util.List Search.searchUsers(java.lang.String)
+public java.util.List Search.searchPosts(java.lang.String)
+public java.util.List Search.searchComments(java.lang.String)
+public java.util.List Search.searchMessages(java.lang.String)
+Public Constructors: public Search(java.util.List,java.util.List,java.util.List,java.util.List,java.util.List)
+------------------
+Class name: Main
+Public Methods: public static void Main.main(java.lang.String[])
+Public Constructors: public Main()
